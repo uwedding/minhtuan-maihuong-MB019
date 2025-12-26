@@ -63,10 +63,10 @@ list.forEach((item) => {
 // Lưu form vào GG sheet
 
 const GOOGLE_SCRIPT_URL_THAM_DU =
-  "https://script.google.com/macros/s/AKfycbw75NchNh7Sk3-msiKBcoI2B9tXWbKkLtIEzDx1xF13i6BDSYLPRTwGXdYUdq-4COyrLw/exec";
+  "https://script.google.com/macros/s/AKfycbyafw1xLtIZU38ESw_r7UHgqqfuvvOD_03SBwtz8Elu09nz94eHTJ99QJauWVzSImaizQ/exec";
 
-const closeIds = ["w-3o68wrvj", "w-ysykddk8", "w-4e9p787b"];
-const formIds = ["f2z9fwg4", "cewgewaj", "tdidxoc8"];
+const closeIds = ["w-ysykddk8", "w-4e9p787b"];
+const formIds = ["cewgewaj", "tdidxoc8"];
 
 formIds.forEach(function (id, index) {
   const form = document.getElementById(id);
@@ -90,6 +90,7 @@ formIds.forEach(function (id, index) {
     })
       .then((res) => {
         res.json();
+        fetchMessages(); // Tải lại dữ liệu từ Google Sheets
         form.reset(); // Reset form sau khi submit thành công\
       }) // Nếu Apps Script trả về JSON
       .catch((err) => console.log(err));
