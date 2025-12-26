@@ -65,8 +65,8 @@ list.forEach((item) => {
 const GOOGLE_SCRIPT_URL_THAM_DU =
   "https://script.google.com/macros/s/AKfycbyafw1xLtIZU38ESw_r7UHgqqfuvvOD_03SBwtz8Elu09nz94eHTJ99QJauWVzSImaizQ/exec";
 
-const closeIds = ["w-ysykddk8", "w-4e9p787b"];
-const formIds = ["cewgewaj", "tdidxoc8"];
+const closeIds = ["w-3o68wrvj", "w-ysykddk8", "w-4e9p787b"];
+const formIds = ["f2z9fwg4", "cewgewaj", "tdidxoc8"];
 
 formIds.forEach(function (id, index) {
   const form = document.getElementById(id);
